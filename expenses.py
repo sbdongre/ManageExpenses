@@ -4,8 +4,8 @@ import numpy as np
 
 @st.cache_data(ttl=3600, max_entries=10)
 def load_data():
-    file_id = '1IxBN_z2LszSmXH9RHCPPNiONvdNcUIGC'
-    url = f'https://drive.google.com/uc?id={file_id}'
+    file_id = st.secrets['file_id']
+    url = st.secrets['url']+file_id 
     xls =  pd.ExcelFile(url)
     return xls.parse('Expenses'), xls.parse('Receipts')
 
