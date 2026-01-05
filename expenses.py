@@ -29,7 +29,7 @@ reconciled_data.rename(columns={'Spent By': 'Name'}, inplace=True)
 reconciled_data.drop(columns='Paid To', inplace=True)
 reconciled_data['Amount Pending'] = reconciled_data['Total Amount Spent'] - reconciled_data['Total Receipts']
 
-st.write('Expenses and Receipts - Bapat Kaku')
+st.markdown("<p style='text-align : center;'>Expenses and Receipts - Bapat Kaku</p", unsafe_allow_html=True)
 
 tabs = st.tabs(['Expenses', 'Receipts', 'Reconcile'])
 tabs[0].write('Expense Summary')
