@@ -10,3 +10,6 @@ wheels/
 .venv
 .streamlit
 .DS_Store
+expenses.csv
+expenses.xlsx
+receipts.csv
